@@ -137,6 +137,19 @@ ramalama run granite
 
 This is particularly useful in multi-GPU systems where you want to dedicate specific GPUs to different workloads.
 
+Beware that if the property is set to empty RamaLama will default to CPU.
+
+```bash
+export CUDA_VISIBLE_DEVICES=""  # Defaults to CPU
+ramalama run granite
+```
+
+In order to return to using all GPUs you must unset the property:
+
+```bash
+unset CUDA_VISIBLE_DEVICES
+```
+
 ## Troubleshooting
 
 ### CUDA Updates
